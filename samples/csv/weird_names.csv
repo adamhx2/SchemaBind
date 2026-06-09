@@ -1,0 +1,3 @@
+First Name,last-name,EmailAddress,phone.number,customer:id,@status,#display,2fa_enabled
+Alex,Morgan,alex.morgan@example.com,555-0142,1001,active,Alex Morgan,true
+Sam,Rivera,sam.rivera@example.com,555-0188,1002,pending,Sam Rivera,false

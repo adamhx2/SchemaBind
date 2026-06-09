@@ -1,0 +1,4 @@
+sku,product_name,category_name,unit_price,inventory_count,warehouse_location,discontinued
+BAG-TRAVEL-001,Canvas Travel Bag,Luggage,89.99,42,Aisle 5 Bin 12,false
+TAG-LUGGAGE-004,Leather Luggage Tag,Accessories,14.99,120,Aisle 2 Bin 7,false
+NOTEBOOK-A5-002,A5 Notebook,Stationery,7.50,300,Aisle 9 Bin 3,false

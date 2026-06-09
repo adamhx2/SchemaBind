@@ -1,0 +1,5 @@
+name,label,type,required
+first_name,First Name,string,true
+last_name,Last Name,string,true
+email_address,Email Address,email,true
+phone_number,Phone Number,phone,false

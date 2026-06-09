@@ -1,0 +1,4 @@
+order_id,customer_id,order_date,order_status,subtotal_amount,tax_amount,shipping_amount,total_amount
+ORD-2026-0007,1001,2026-06-08,processing,149.95,12.37,8.50,170.82
+ORD-2026-0008,1002,2026-06-08,submitted,22.50,1.86,4.99,29.35
+ORD-2026-0009,1003,2026-06-09,cancelled,64.00,5.28,0.00,69.28
