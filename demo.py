@@ -3,14 +3,7 @@ from schemabind import bind
 
 
 def get_sample_csv():
-    # CSV sample paths:
-    # samples_csv = "samples/csv/contact_fields.csv"
-    # samples_csv = "samples/csv/customer.csv"
-    samples_csv = "samples/csv/orders.csv"
-    # samples_csv  = "samples/csv/product.csv"
-    # samples_csv = "samples/csv/weird_names.csv"
-
-    return samples_csv
+    return "samples/csv/customer.csv"
 
 
 def read_csv(path):
@@ -19,25 +12,22 @@ def read_csv(path):
         return list(reader)
 
 
-def test():
+def run_demo():
     csv_path = get_sample_csv()
-    customer_data = read_csv(csv_path)
+    rows = read_csv(csv_path)
 
-    for row in customer_data[1:2]:
-        x = bind(row)
-        print(x)
+    customer = bind(rows[0])
 
-        print(x.keys())
-
-        print(x.values())
-
-        print(x.items())
-
-        print(x.first_n)
+    print(customer)
+    print(customer.first_name)
+    print(customer.email_address)
+    print(customer.phone_number)
+    print(customer.get("signup_source"))
+    print(customer.keys())
 
 
 def main():
-    test()
+    run_demo()
 
 
 if __name__ == "__main__":
