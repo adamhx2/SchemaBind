@@ -24,7 +24,7 @@ customer.phone_number
 
 SchemaBind is currently focused on dictionaries, including rows produced by `csv.DictReader`.
 
-It does not create schemas, validate data, transform values, or infer field names. It simply provides a cleaner way to access fields that already exist.
+It does not create schemas, validate data, transform values, or infer new fields. It simply provides a cleaner way to access fields that already exist.
 
 ## Example
 
@@ -43,3 +43,35 @@ print(customer.phone_number)
 ```
 
 Missing attributes raise `AttributeError` instead of silently returning `None`, which helps catch typos in field names.
+
+## Field Normalization
+
+SchemaBind supports simple field-name normalization for attribute access.
+
+For example:
+
+```python
+customer = bind({"First Name": "Kaladin"})
+
+print(customer.first_name)
+```
+
+The original dictionary keys are preserved for dictionary-style helpers:
+
+```python
+customer.keys()
+customer.get("First Name")
+```
+
+If multiple fields normalize to the same attribute name, SchemaBind raises `ValueError` instead of guessing which field to use.
+
+For example:
+
+```python
+bind({
+    "First Name": "Dalinar",
+    "first_name": "Shallan",
+})
+```
+
+Both fields would normalize to `first_name`, so the binding is rejected as ambiguous.
