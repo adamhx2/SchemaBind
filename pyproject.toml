@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools >= 77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "schemabind"
+version = "0.1.0"
+description = "Expose existing dictionary fields as readable Python attributes."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Adam" }
+]
+license = "MIT"
+keywords = ["dictionary", "attributes", "csv", "schema", "developer-tools"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Repository = "https://github.com/adamhx2/SchemaBind"
+Issues = "https://github.com/adamhx2/SchemaBind/issues"
+
+[tool.setuptools.packages.find]
+include = ["schemabind"]
